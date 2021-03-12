@@ -1,8 +1,8 @@
 # Objects vs JSON
 
 # 1
-Definiere eine Liste von mehreren User Objekten. Jeder User hat einen Namen und eine Punktezahl. \
-Sortiere die Liste anhand der Punktezahl aufsteigend.
+Definiere ein Array von mehreren User Objekten. Jeder User hat einen Namen und eine Punktezahl. \
+Sortiere den Array anhand der Punktezahl aufsteigend.
 
 Tip: Dokumentation von Array auf MDN studieren, um herauszufinden wie man sortiert :)
 
@@ -11,8 +11,8 @@ Erstelle einen JSON String der 3 top Scorer. \
 Finde mehrere Varianten, um die Top 3 auszulesen
 
 # 3
-Wandle die Liste der User in eine Liste von Objekten in der Form: `{ content: String, length: Number }` um. \
-Wobei content der Username ist und length die länge des Namens. Sortiere die Liste aufsteigend nach length.
+Wandle den Array der User in ein Array von Objekten in der Form: `{ content: String, length: Number }` um. \
+Wobei content der Username ist und length die länge des Namens. Sortiere den Array aufsteigend nach length.
 
 # 4
 Erstelle eine tabellarisch korrekt ausgerichtete Rangliste der 3 top Scorer, im ASCII Format :).
