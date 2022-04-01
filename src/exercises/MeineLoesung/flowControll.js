@@ -1,10 +1,12 @@
-//Aufgabe 1 
+//If und switch case
+"use strict"
+//Aufgabe 1
 //Variante 1
 let name = " Claudia"
-let alter = 101;
+let alter = 100;
 let hiChild = "Hoi " + name;
 let hiTeen = "Hallo" + name;
-let grüezi = "gruezi"+ name;
+let grüezi = "Gruezi"+ name;
 let alte = "Grüss Gott" + name;
 
 if(alter <= 10 ){
@@ -70,44 +72,35 @@ if(age > 60){
 console.log(betrag + "fr.-")
 
 //Aufgabe 3
-
-
-
-
-
-//Schleifen / Loops
-
-//Aufgabe 2
 //Variante 1
-let numbers = [1,2,3]
-let result = [];
+let geschlecht = "w";
+let age1 = 18
+let enter = false;
 
-for (let number of numbers){
-    if(number %2 === 0){
-    result.push(true)
-
-    }else{
-        result.push(false);
-    }
+switch (geschlecht){
+    case "w":
+        enter = age1 >= 18;
+        break;
+    case "m":
+        enter = age1 >= 20;
+        break;
+    default:
+        enter = false;
 }
 
-// Variante 2 als Funktion
-function numberToBoolean(...numbers){
-    let result =[]
-    for (let number of numbers){
-        result.push(number % 2 === 0)
-}
-return result;
-}
-console.log(result)
+console.log(`Darf die Person des Geschlechts ${geschlecht} hinein? --> ${enter}`);
+//Variante 2 + 3 Ternäre schreibweise
 
-//Array Spreaden wieder auspacken
-const numberArray = [1,2,3,4]
-console.log(numberToBoolean(...numberArray));
+let enter1 = (age1 >= 18 && geschlecht === "w") || (age1 >= 20 && geschlecht === "m")
+let enter2 = (age1 >= 18 && geschlecht === "w") || (age1 >= 20 && geschlecht === "m")? "Darf hinein":"Darf nicht hinein"
+console.log(enter1)
+console.log(enter2)
 
-//rest parameter einzelne zahlen werden zu einem array zusammengefasst
-numberToBoolean(1,2,3,4,5,6);
-console.log(numberToBoolean(1,2,3,4,5,6))
+
+
+
+
+
 
 
 
