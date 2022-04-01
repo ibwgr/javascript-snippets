@@ -150,3 +150,49 @@ for (let j = 0; j < normalText.length; j++) {
 }
 console.log(caesarText)
 
+//Aufgabe 6.1
+let mixedNumbers = [1, 5, -10, 6.7, 45]
+let integers = []
+
+for (const integer of mixedNumbers) {
+    if (integer % 1 === 0){
+        integers.push(integer)
+    }
+}
+console.log(integers)
+
+//6.2
+let positivNumbers = []
+
+for (const positivNumber of mixedNumbers) {
+    if (positivNumber > 0){
+        positivNumbers.push(positivNumber)
+    }
+}
+console.log(positivNumbers)
+
+//6.3
+
+/****************************************/
+//???? Fehler
+let querSumme = 0;
+for (let i = 0; i < mixedNumbers.length; i++){
+    if (mixedNumbers[i] <= 9){
+        querSumme += mixedNumbers[i]
+    }
+    /*while (mixedNumbers[i]) {
+        querSumme += mixedNumbers[i] % 10;
+        mixedNumbers[i] = Math.floor(mixedNumbers[i] / 10);
+    }*/
+}
+console.log(querSumme)
+
+//6.4
+let zwischenSum = 0;
+let durchschnitt = 0;
+for (let j = 0; j < mixedNumbers.length; j++) {
+    zwischenSum += mixedNumbers[j]
+
+}
+durchschnitt = zwischenSum / mixedNumbers.length
+console.log(durchschnitt)
