@@ -276,6 +276,25 @@ Berechne den Durchschnitt (arithmetisches Mittel) aller Zahlen.
     sum2
     durchschnitt
 
+    // Okey nochmals die Quersumme nun splitten wir die zahlen die grösser als 9 sind (Danke Urs du pisser):
+    let quersumme = 0;
+    for(let n of zahlen){
+        if(n > 9){
+            n = n+"" // String daraus machen
+            let stringArr = n.split('');
+
+            let numVal=0
+            for (const nstring of stringArr) {
+                numVal += parseInt(nstring)
+            }
+            numVal = stringArr[0] === '-' ? numVal * -1 : numVal;
+            quersumme += numVal
+        }else{
+            quersumme +=n;
+        }
+    }
+    console.log(quersumme)
+
 }
 
 /*
