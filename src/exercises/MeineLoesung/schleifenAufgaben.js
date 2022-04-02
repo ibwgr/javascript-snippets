@@ -196,3 +196,52 @@ for (let j = 0; j < mixedNumbers.length; j++) {
 }
 durchschnitt = zwischenSum / mixedNumbers.length
 console.log(durchschnitt)
+
+//7.1
+let zeichenKette = "Ich habe keine Ahnung"
+let neueZeichenKette = ""
+
+for (let i = 0; i < zeichenKette.length; i++) {
+    if (i % 2 === 0){
+        neueZeichenKette += zeichenKette[i].toLowerCase()
+    }else {
+        neueZeichenKette += zeichenKette[i].toUpperCase()
+    }
+}
+console.log(neueZeichenKette)
+
+
+// 7.2
+let konstanten = ["b","c","d","g","h","k","m","n","p","r","s","t","w"]
+let selbstlaute = ["be", "ce", "de", "ge", "ha", "ka", "äm", "än", "pe", "är", "äs", "te", "we"]
+let tauschString = ""
+for (let i = 0; i < zeichenKette.length; i++) {
+    if (konstanten.includes(zeichenKette[i].toLowerCase())){
+       let tausch =  konstanten.indexOf(zeichenKette[i].toLowerCase())
+        tauschString += selbstlaute[tausch]
+    }else{
+        tauschString += zeichenKette[i]
+    }
+}
+console.log(tauschString)
+
+// 7.3
+//Variante 1
+let reverseZeichenKette = ""
+
+for (let i = zeichenKette.length -1; i >= 0 ; i--) {
+    reverseZeichenKette += zeichenKette[i]
+}
+console.log(reverseZeichenKette)
+
+//Variante 2
+let stringArr1 = zeichenKette.split('')
+let reversed1 = stringArr1.reverse().join('')
+console.log(reversed1)
+
+
+// 7.4
+
+let stringArr2 = zeichenKette.split(' ')
+let reversed2 = stringArr2.reverse().join(' ')
+console.log(reversed2)
