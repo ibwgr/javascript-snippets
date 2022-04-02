@@ -246,9 +246,21 @@ console.log(pz)
 /*
 6.3 Berechne die Quersumme aller Zahlen
  */
-let qs = zahlen.reduce((a,b) => a + b)
-console.log(qs)
-
+qs = 0;
+zahlen = [2,4,5,6,43,7,6,54,-34,654,32];
+for (const number of zahlen) {
+    if(number>0) {
+        for (const zahl of number.toString()) {
+            qs += Number(zahl);
+        }
+    } else {
+        for (const zahl of number.toString()) {
+            if(!isNaN(Number(zahl)))
+                qs -= Number(zahl);
+        }
+    }
+}
+qs
 /*
 6.4 Berechne den Durchschnitt (arithmetisches Mittel) aller Zahlen
  */
