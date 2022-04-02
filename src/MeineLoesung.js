@@ -98,19 +98,34 @@ Berechne die Quersumme aller Zahlen.
 #### 6.4
 Berechne den Durchschnitt (arithmetisches Mittel) aller Zahlen.
  */
-
-let arr1 = [1,2,3,4,5]
-let summerArr = 0;
-for (let i = 0; i<arr1.length;i++){
-    summerArr = summerArr + arr1[i]
-}
-console.log("summerArr : "+summerArr)
-
-let x = arr1.length
-let ausgabe = summerArr/x
-
-console.log("ausgabe: "+ausgabe)
+//
+// let arr1 = [1,2,3,4,5]
+// let summerArr = 0;
+// for (let i = 0; i<arr1.length;i++){
+//     summerArr = summerArr + arr1[i]
+// }
+// console.log("summerArr : "+summerArr)
+//
+// let x = arr1.length
+// let ausgabe = summerArr/x
+//
+// console.log("ausgabe: "+ausgabe)
 
 //-------------------------------------------------------------------------------------------
+//fibonacci
+//Eine unendliche Zahlenreihe, die mit 0 und 1 beginnt. Jede weitere Zahl entspricht dabei der Summe der beiden vorangegangenen Zahlen. Damit lautet der Anfang der Zahlenreihe 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 usw.
 
+let arr1 = [0,1]
 
+let arr2 = arr1
+for(let i = 1; i<11;i++){
+    arr2.push(arr1[i]+arr1[i-1])
+}
+console.log(arr2)
+/*
+[
+   0,  1,  1,  2,  3,
+   5,  8, 13, 21, 34,
+  55, 89
+]
+ */
