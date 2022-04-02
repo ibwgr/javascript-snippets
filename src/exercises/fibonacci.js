@@ -7,6 +7,7 @@ function fibonacci (anzahlElemente){
 
     for (let i = 2; fibonacciArr.length < anzahlElemente; i++) {
         console.log(i)
+        // Addiere die zahlen von fiboarray[index (letzte zahl)] + fiboarray[index (zweitletzte zahl)]
         fibonacciArr.push(fibonacciArr[i-2] + fibonacciArr[i-1])
     }
     return fibonacciArr
