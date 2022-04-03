@@ -151,7 +151,7 @@ for (let j = 0; j < normalText.length; j++) {
 console.log(caesarText)
 
 //Aufgabe 6.1
-let mixedNumbers = [1, 5, -10, 6.7, 45]
+let mixedNumbers = [1, 5, -10, 6.7, 45, 30]
 let integers = []
 
 for (const integer of mixedNumbers) {
@@ -174,16 +174,27 @@ console.log(positivNumbers)
 //6.3
 
 /****************************************/
-//???? Fehler
+//
+console.log(positivNumbers)
+// Quersumme berechnung von allen positiven zahlen
 let querSumme = 0;
-for (let i = 0; i < mixedNumbers.length; i++){
-    if (mixedNumbers[i] <= 9){
-        querSumme += mixedNumbers[i]
+for (let i = 0; i < positivNumbers.length; i++){
+    let stringNumber = ""
+    if (positivNumbers[i] <= 9){
+        querSumme += positivNumbers[i]
+        console.log(querSumme)
+    }else{
+        // zweistellige oder grössere Zahlen werden in string gewandelt und zerlegt
+        stringNumber = String(positivNumbers[i])
+        console.log(stringNumber)
+        for (const stringNumberElement of stringNumber) {
+            console.log(stringNumberElement)
+            let digit = Number(stringNumberElement)
+            querSumme += digit
+            console.log(querSumme)
+        }
     }
-    /*while (mixedNumbers[i]) {
-        querSumme += mixedNumbers[i] % 10;
-        mixedNumbers[i] = Math.floor(mixedNumbers[i] / 10);
-    }*/
+
 }
 console.log(querSumme)
 
