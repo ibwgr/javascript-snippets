@@ -28,21 +28,33 @@ Tip: &&
 //-----------------------------------------------------------------------------------
 let alter = 10
 let name = 'hans'
-///////////////////////////////////////////////////////////////
-switch (alter) {
-    case (alter<=10):
-        console.log("Hoi "+name)
-        break;
-    case alter>=11 && alter<=18:
-        console.log("Hallo "+name)
-        break;
-    case (alter>=19 && alter<=100):
-        console.log("Grüezi "+name)
-        break;
-    // default:
-    //     console.log("Grüss Gott "+name)
-    //     break;
-}
+
+ x = (alter >= 101) ? 'Grüess Gott '+name :  (alter >= 19) ? 'Grüezi '+name : (alter >= 11) ? 'Hallo '+name : 'Hoi '+name//(alter < 11) ? 'Hallo '+name : 'nicht geboren'
+
+console.log(x)
+//----------------------------------------------------------------------------
+/*
+### 2
+Schreibe ein Programm, welches den Eintrittspreis abhängig vom Alter bestimmt.
+Es gelten folgende Regeln:
+- Wer jünger als 5 ist, bekommt Gratiseintritt
+- Ab 5 bis 15 Jahren zahlt man 5 Franken
+- Ab 16 zahlt man denn Vollpreis von 15 Franken
+- Senioren ab 60 bezahlen 10 Franken
+
+Gib den Betrag in Franken auf die Console aus.
+
+Schreibe zwei Varianten,
+- eine Variante mit "else if",
+- eine Variante ohne Verwendung von "else if"
+
+Tip: &&
+ */
+
+
+
+
+
 //----------------------------------------------------------------------------------------------------
 /*### 3
 Schreibe ein Programm, welches entscheidet, wer in den Club darf und wer nicht
