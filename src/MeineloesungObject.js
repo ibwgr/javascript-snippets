@@ -56,42 +56,31 @@ Das heisst verwende nur einfache Zeichen, um die Liste zu erstellen.
 |Martin|12|
 ```
 */
-
-let user1 = [ {name: 'ueli', score: 2 } ]
-
-let user2 = [{
-    name: 'cla',
-    score: 1
-}]
-
-// let userList = [{
+//
+// let user1 = { name: 'ueli', score: 2  }
+//
+// let user2 = {
+//     name: 'cla',
+//     score: 1
+// }
+//
+// // let userList = [{
+// //     user1,
+// //     user2
+// // }]
+// const userList = [
 //     user1,
 //     user2
-// }]
-const userList = [{
-    user1,
-    user2
-}]
-console.log(userList.length)
-
-
-// function listeAscii3(users) {
-//     let result = '|Name|Punkte|\n'
-//     result += '|----|------|\n'
-//     for (const user of userList) {
-//         result += '|' + user.name + '|' + user.score +'|\n'
-//     }
-//     return result
-// }
-// console.log(listeAscii3(users))
-
+// ]
+// console.log("userList-Länge: "+userList.length)
+// console.log(user2.name)
+//
+//
 // let str = '|Name|Punkte|';
 // str +=  '\n|----|------|\n';
 //
-//
-//
 //  for(let i = 0;i<userList.length;i++){
-//      str = str + '|' + userList[i] +'|\n'
+//      str = str + '|' + userList[i].name + '|' + userList[i].score +'|\n'
 //  }
 //
 // console.log(str)
@@ -102,7 +91,40 @@ console.log(userList.length)
 Finde die Länge des längsten Namen, sowie die Länge der höchsten Punktezahl.
 */
 
+let user1 = {
+    name: 'Hans',
+    score: 2
+}
+let user2 = {
+    name: 'enoiönöionöin',
+    score: 45
+}
 
+let userList=[user1,user2]
+
+let grössteZahlScore = 0;
+let hilfszahlScore = 0;
+for(let i = 0; i<userList.length;i++){
+    hilfszahlScore = userList[i].score;
+    console.log("Zwischenergebniss: "+hilfszahlScore)
+    if(hilfszahlScore>grössteZahlScore){
+        grössteZahlScore+=hilfszahlScore;
+    }
+}
+
+console.log("grösster Score-Punkte: "+grössteZahlScore)
+
+let grössteZahlName = 0;
+let hilfszahlName = 0;
+for(let i = 0; i<userList.length;i++){
+    hilfszahlName = userList[i].name.length;
+    console.log("Zwischenergebniss: "+hilfszahlName)
+    if(hilfszahlName>grössteZahlName){
+        grössteZahlName=hilfszahlName;
+    }
+}
+
+console.log("grösste Länge-Name: "+grössteZahlName)
 
 
 //--------------------------------------------------------------
