@@ -26,23 +26,23 @@ Tip: &&
 //     console.log("Grüss Gott "+name)
 // }
 //-----------------------------------------------------------------------------------
-// let alter = 10
-// let name = 'hans'
-/////////////////////////////////////////////////////////////////
-// switch (alter) {
-//     case (alter<=10):
-//         console.log("Hoi "+name)
-//         break;
-//     case alter>=11 && alter<=18:
-//         console.log("Hallo "+name)
-//         break;
-//     case (alter>=19 && alter<=100):
-//         console.log("Grüezi "+name)
-//         break;
+let alter = 10
+let name = 'hans'
+///////////////////////////////////////////////////////////////
+switch (alter) {
+    case (alter<=10):
+        console.log("Hoi "+name)
+        break;
+    case alter>=11 && alter<=18:
+        console.log("Hallo "+name)
+        break;
+    case (alter>=19 && alter<=100):
+        console.log("Grüezi "+name)
+        break;
     // default:
     //     console.log("Grüss Gott "+name)
     //     break;
-//}
+}
 //----------------------------------------------------------------------------------------------------
 /*### 3
 Schreibe ein Programm, welches entscheidet, wer in den Club darf und wer nicht
@@ -74,6 +74,12 @@ Schreibe zwei Varianten:
 - eine ohne Schlaufen zu verwenden
 - eine mit einer Schlaufe
  */
+
+//let str = 'Pinguin';
+
+
+
+
 
 
 
@@ -211,3 +217,35 @@ Berechne den Durchschnitt (arithmetisches Mittel) aller Zahlen.
 //  */
 
 //-------------------------------------------------------------------------------------
+
+/*
+Gegeben ist eine beliebige Zeichenkette.
+#### 7.2
+Ersetze alle Konsonanten durch die entsprechenden Selbstlaute. \
+Zum Beispiel aus einem "p" wird "pe", aus "c" wird "ce", aus "k" wird "ka" etc.
+ */
+// let strNormal = 'Gegeben ist eine beliebige Zeichenkette'
+// let arr1 = ['be','ce','de','äf','ge','ha','jot','äl','äm','an','pe','qu','är','äs','te','vau','we','ix','ypsilo','zät']
+// let arr2 = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+// let arr3 = ['a','e','i','o','u']
+// let str2 = '';
+// console.log(arr1)
+// console.log(strNormal)
+//
+// let strKlein = strNormal.toLowerCase();
+// console.log("str3: "+strKlein)
+//
+// for(let i = 0; i<strKlein.length;i++){
+//     for(let j = 0; j<arr2.length; j++){
+//         if(strKlein[i]===arr2[j]){
+//             str2 = str2+arr2[j]
+//         }
+//         else{
+//
+//         }
+//     }
+//
+// //noch nicht fertig.....................
+//
+// }
+// console.log("str2: "+str2)
