@@ -26,12 +26,12 @@ Tip: &&
 //     console.log("Grüss Gott "+name)
 // }
 //-----------------------------------------------------------------------------------
-let alter = 10
-let name = 'hans'
-
- x = (alter >= 101) ? 'Grüess Gott '+name :  (alter >= 19) ? 'Grüezi '+name : (alter >= 11) ? 'Hallo '+name : 'Hoi '+name//(alter < 11) ? 'Hallo '+name : 'nicht geboren'
-
-console.log(x)
+// let alter = 10
+// let name = 'hans'
+//
+//  x = (alter >= 101) ? 'Grüess Gott '+name :  (alter >= 19) ? 'Grüezi '+name : (alter >= 11) ? 'Hallo '+name : 'Hoi '+name//(alter < 11) ? 'Hallo '+name : 'nicht geboren'
+//
+// console.log(x)
 //----------------------------------------------------------------------------
 /*
 ### 2
@@ -50,7 +50,17 @@ Schreibe zwei Varianten,
 
 Tip: &&
  */
-
+// let alter = 60
+//
+// if(alter<5){
+//  console.log("Gratis Eintritt")
+// }else if (alter >=5 && alter <=15){
+//  console.log("Eintritt ist 5 Franken")
+// }else if(alter >= 16 && alter <60){
+//  console.log("Eintritt ist 15.-")
+// }else if(alter >= 60){
+//  console.log("10 Franken für Senioren")
+// }
 
 
 
@@ -76,6 +86,50 @@ Schreibe zwei Varianten,
 //
 // tuerSteher(17,'f')
 // console.log(ausgabe)
+//-----------------------------------------------------------------------------------
+
+// let alter = 20
+// let geschlecht = 'f'
+
+// switch (alter, geschlecht){
+//  case alter>=18 && geschlecht='f':
+//   console.log("die Frau darf rein")
+//         break;
+//  case alter>=20 && geschlecht='m':
+//   console.log("Männer über 20 dürfen rein")
+// }
+
+// Logische Verknüpfungen
+// && AND
+{
+ let age = 18
+ let sex = 'f'
+ let canEnter = (age >= 18 && sex === 'f') || (age >= 20 && sex === 'm')
+ //true
+
+ switch (canEnter) {
+  case true:
+   console.log("Eintritt ist gut")
+   break;
+  case false:
+   console.log("geht nicht")
+ }
+}
+// var alter = 22
+// var geschlecht = 'm'
+// switch (alter, geschlecht) {
+//  case ((alter>=20 && geschlecht==='m') ):
+//   console.log('Männlich ab 20 darf in den Club');
+//   break;
+//  case ((alter>=18 && geschlecht==='f')):
+//   console.log("Frauen ab 18Jahren dürfen in den Club")
+//         break;
+//   default:
+//    console.log('Darf nicht in Cub');
+//   //break;
+// }
+
+
 //-------------------------------------------------------------------------------------------
 /*
 ### 0
