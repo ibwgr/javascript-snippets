@@ -131,6 +131,7 @@ Schreibe zwei Varianten,
 
 
 //-------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
 /*
 ### 0
 Schreibe ein Programm, welches jedes Zeichen eines Strings einzeln ausgibt, Komma getrennt.
@@ -139,14 +140,45 @@ z.B. aus `"Pinguin"` wird `"P,i,n,g,u,i,n"`
 Schreibe zwei Varianten:
 - eine ohne Schlaufen zu verwenden
 - eine mit einer Schlaufe
- */
+*/
+// let x = 'Pinguin';
+// console.log(x.split(''));
+// //Array(7) [ "P", "i", "n", "g", "u", "i", "n" ]
 
-//let str = 'Pinguin';
+// //
+// const x = 'Pinguin';
+// let str = '';
+// for (let i = 0; i < x.length - 1; i++) {
+//
+//  str = str + x[i] + ',';
+//
+//  //console.log(str);
+// }
+// str = str + x.substr(-1); //oder str = str+x.substr(x.length-1);
+// console.log(str);
+// //P,i,n,g,u,i,n
 
 
 
+//------------------------------------------------------------------------------------
+/*
+### 1
+Schreibe ein Programm, das alle Zahlen eines Arrays summiert.
 
+z.B. aus `[1,2,3]` wird `6`
 
+Versuche drei Varianten zu schreiben, welche jeweils unterschiedliche Schlaufentypen verwenden.
+*/
+
+// let x = [1, 2, 3];
+// let y = 0;
+//
+// for (let i = 0; i < x.length; i++) {
+//  y = y + x[i];
+// }
+//
+// console.log(y);
+// //6
 
 
 //------------------------------------------------------------------------------------
@@ -171,6 +203,69 @@ z.B. aus `[1,2,3]` wird `[false, true, false]`
 // }
 //
 // console.log(arr2)
+//---------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+/*
+### 3
+Schreibe ein Programm, welches jeden ersten Buchstaben aller Wörter eines Strings in einen Grossbuchstaben umwandelt.
+
+z.B. aus `"Ich weiss, dass ich nichts weiss ... !"` wird `"Ich Weiss, Dass Ich Nichts Weiss ... !"`
+*/
+
+/*
+let str = 'Ich weiss, dass ich nichts weiss ... !';
+
+let strsplit = str.split(" ");
+
+console.log(strsplit);
+
+for(let i = 0; i<str.length;i++){
+
+}
+*/
+// let str = 'Ich weiss, dass ich nichts weiss ... !';
+//
+// let str2 = str[0];
+//
+// for (let i = 1; i < str.length; i++) {
+//  if (str[i - 1] === ' ') {
+//   str2 = str2 + str[i].toUpperCase();
+//  } else {
+//   str2 = str2 + str[i];
+//  }
+// }
+//
+// console.log(str2);
+// //Ich Weiss, Dass Ich Nichts Weiss ... !
+
+//----------------------------------------------------------------------------------------------------
+/*
+### 4
+Schreibe ein Programm, das alle Primzahlen zwischen 0 und 100 ausgibt.
+//Primzahlen sind nur durch 1 und durch sich selbst teilbar!
+Versuche 2 Varianten zu schreiben, mit jeweils anderen Schlaufentypen.
+*/
+// let arr = [];
+// arr.length = 100;
+// //array füllen mit Zahlen
+// for (let i = 0; i <= 100; i++) {
+//  arr[i] = i;
+//  console.log(arr[i]);
+// }
+//
+// for (let j = 0; y < arr.length; j++) {
+//  if ((arr[j] / j = 1) || (arr[j] / 1 = 1))
+//      } //nicht fertig!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//----------------------------------------------------------------------------------------
+/*
+### 5
+Schreibe ein Program, das einen beliebigen Text mit Cäsar Chiffre verschlüsselt.
+
+z.B. aus `"abcz"` wird `"bcd{"`, sofern die Verschiebung 1 ist.
+
+ */
+
+
 
 
 //-----------------------------------------------------------------------------------------
@@ -315,3 +410,49 @@ Zum Beispiel aus einem "p" wird "pe", aus "c" wird "ce", aus "k" wird "ka" etc.
 //
 // }
 // console.log("str2: "+str2)
+
+
+//------------------------------------------------------------------------------------
+// /*
+// #### 7.3
+// Gib die Zeichenkette rückwärts aus. \
+// z.B. aus "Hallo du" wird "ud ollaH".
+// */
+// const x = 'Pinguin';
+// let str = '';
+// for (let i = x.length - 1; i >= 0; i--) {
+//
+//  str = str + x[i];
+//
+//  //console.log(str);
+// }
+//
+// console.log(str);
+// //niugniP
+
+//----------------------------------------------------------------------------------
+/*
+#### 7.4
+Gib die Wörter der Zeichenkette rückwärts aus. \
+z.B. aus "Hallo du, wie geht es dir?" wird "dir? es geht wie du, Hallo"
+*/
+// const x = 'Hallo du, wie geht es dir?';
+// let str = '';
+// let y = x.split(' ');
+//
+// console.log(y);
+//
+// str = str + y[y.length - 1] + ' ';
+// for (let i = y.length - 2; i >= 1; i--) {
+//
+//  str = str + y[i] + ' ';
+//
+//  //console.log(str);
+// }
+//
+// str = str + y[0];
+//
+// console.log(str);
+
+//Array(6) [ "Hallo", "du,", "wie", "geht", "es", "dir?" ]
+//dir? es geht wie du, Hallo
