@@ -9,6 +9,32 @@
 // Gib das Ergebnis der Berechnung zurück.
 // Versuche zwei Lösungs-Varianten zu finden (Hint: bind).
 
+function add(a, b){
+    return a + b
+}
+
+function aPlusb(p) {
+    return add(20,p)
+}
+
+console.log(aPlusb(2))
+//----------------------------------------------------------------------
+// function aPlusb(p) {
+//
+//
+//     add: function add(a, b){
+//         return a + b
+//     }
+// }
+//
+// console.log(aPlusb(2))
+
+
+// function aPlusb(p) {
+//     let a = 20;
+//     let b = p;
+//     return a+b;
+// }
 
 
 // 2
