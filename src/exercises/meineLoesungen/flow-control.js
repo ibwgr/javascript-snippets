@@ -298,6 +298,18 @@ let search = ['b','c','d','f','g','h','j','l','m','n','p','q','r','s','t','v','w
 let replace = ['be','ce','de','äf','ge','ha','jot','äl','äm','än','pe','qu','äs','te','vau','we','ix','ypsilon','zät','BE','CE','DE','ÄF','GE','HA','JOT','ÄL','ÄM','ÄN','PE','QU','ÄS','TE','VAU','WE','IT','YPSILON','ZÄT'];
 let res = '';
 for (const zeichen of zeichenkette) {
+    if(search.includes(zeichen)) {
+        res += replace[search.indexOf(zeichen)];
+    } else {
+        res += zeichen;
+    }
+}
+console.log(res);
+
+
+// loesung 2:
+res = '';
+for (const zeichen of zeichenkette) {
     if(search.indexOf(zeichen) >= 0) {
         res += replace[search.indexOf(zeichen)];
     } else {
@@ -306,7 +318,7 @@ for (const zeichen of zeichenkette) {
 }
 console.log(res);
 
-// loesung 2 (kompliziert):
+// loesung 3 (kompliziert):
 resultat = ''
 let vokale = ['a', 'e', 'i', 'o', 'u']
 for (const zeichen of zeichenkette) {
