@@ -19,7 +19,7 @@ function Auto(brand){
     // erstelle für jedes auto ein neues funktionsobjekt
     // => memory leak
     this.drive = function(distance){
-        console.log('drive instance')
+        console.log('drive instance', distance)
        this.distance += distance
     }
 }
@@ -27,7 +27,7 @@ function Auto(brand){
 // Besser: erstelle die drive Funktion einmal im Prototyp Objekt,
 // alle Instanzen von Auto verwenden dann diese Funktion
 // Auto.prototype.drive = function(distance){
-//     console.log('drive prototype')
+//     console.log('drive prototype', distance)
 //     this.distance += distance;
 // }
 
@@ -37,8 +37,8 @@ a1.drive(10)
 a2.drive(340)
 
 
-// Auto.prototype.drive = function(){
-//     console.log('drive prototype overwrite')
+// Auto.prototype.drive = function(distance){
+//     console.log('drive prototype overwrite', distance)
 // }
 
 let a3 = new Auto('Tesla')
@@ -46,8 +46,8 @@ a3.drive(10)
 a1.drive(10)
 
 // Die Eigenschaft __proto__ zeigt auf das Prototyp-Objekt.
-// Falls es keine prototype Definition gibt (Ctor.prototype.xy = ...)
-// Zeigt es direkt auf eine Instanz von Object (Default Prototype eines Objektes)
+// Falls es keine prototype Definition gibt (Ctor.prototype.xy = ...),
+// dann zeigt es direkt auf eine Instanz von Object (Default Prototype eines Objektes)
 console.log(a3.__proto__)
 
 // Erstelle Objekt ohne Prototype
