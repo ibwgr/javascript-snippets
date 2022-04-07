@@ -39,15 +39,23 @@ Als default Name soll immer noch Welt gelten.
 Versuche zwei Lösungsvarianten zu finden (Hint: Rest-Parameter)
 */
 {
+
     function bekommeNameGebeNameZurueck(...name) {
 
-        if (name == undefined) {
-            name = 'Welt'
-        }
 
         let ausgabe = '';
+        if(name.length==0){
+            ausgabe += "Welt";
+        }
+
+
         for (let i = 0; i < name.length; i++) {
-            let x = '\\<' + name[i] + '\\>' + ','
+            let x = '';
+            if(name[i]===undefined){
+                x='Welt';
+            }else{
+                x = '\\<' + name[i] + '\\>' + ','
+            }
             ausgabe = ausgabe + x
             //console.log(ausgabe)
         }
@@ -55,5 +63,6 @@ Versuche zwei Lösungsvarianten zu finden (Hint: Rest-Parameter)
         return "Hallo " + ausgabe;
     }
 
-    console.log(bekommeNameGebeNameZurueck('Erika', 'Hansii'))
+    console.log(bekommeNameGebeNameZurueck('erika',undefined,'hans','ueli'))
+
 }
