@@ -39,7 +39,7 @@ function ohneParams(){
 }
 
 
-// scopes
+// scopes & Context
 let x = 1 // definiert die variable x im aktuellen scope (globaler scope)
 let y = 2
 function scope(){
@@ -48,19 +48,20 @@ function scope(){
     // x sucht die variable x im lokalen scope und im äusseren globalen scope
     console.log(this, this.x, x)
 }
-scope() // undefined undefined 1
-new scope() // {} undefined 1
-let obj = { scope: scope, x: 2 }
-obj.scope() // Object 2 1
+//scope() // undefined undefined 1
+//new scope() // {} undefined 1
+let obj = { scope: scope, x: 2 } //zeigt auf Objekt
+//obj.scope() // Object 2 1
 
-// scope ändern
+// context ändern
 function log(it){
     console.log(this, it)
 }
-log.call(1, 'hi')
-log.apply(1, ['hi'])
+//log.call(1, 'hi') // 1 ist das This mann gibt das Ding mit was this sein soll
+//log.apply(1, ['hi']) //gleich wie call nur kann man arg als array mitgeben
 let scopeWith1 = log.bind(1)
 scopeWith1('hi')
+
 
 // arrow functions
 let summ = (a, b) => a + b
