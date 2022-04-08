@@ -36,3 +36,23 @@ function  returnMoreNameDefault (...name){
 
 console.log(returnMoreNameDefault("Claudia", "Simon", "Marco"))
 console.log(returnMoreNameDefault())
+
+//"use strict"
+function test1 (){
+    console.log(this)
+}
+test1()
+let objekt={
+    name: "Claudia",
+    say: function (){
+        console.log(this.name)
+    }
+
+};
+console.log(objekt.name)
+let objektName = objekt.say()
+console.log(objektName)
+console.log(objekt.__proto__)
+
+
+

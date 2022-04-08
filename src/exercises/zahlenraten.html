@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zahlen raten</title>
+</head>
+<body>
+<p>
+    Finde die Geheimzahl!
+</p>
+
+<script>
+const numberOfElements = 20
+    const secret = Math.floor(Math.random() * numberOfElements)
+    console.log(secret)
+
+    for (let divNr = 0; divNr <= numberOfElements ; divNr++) {
+        const div = document.createElement("div")
+        div.innerText = String(divNr)
+        div.addEventListener("click", (ev) => {
+            if(Number(ev.target.innerText) === secret){
+                alert('hurray')
+            }
+        })
+    document.body.appendChild(div)
+    }
+
+</script>
+</body>
+</html>
