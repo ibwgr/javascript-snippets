@@ -11,7 +11,7 @@ Verändere die Funktion so, dass wenn kein Name angegeben wird, als default Name
 ### 1.3
 Verändere die Funktion so, dass man soviele Namen wie man will mitgeben kann. 
 
-Die Ausgabe ist dann "Hallo \<name1>, \<name2>, ...".
+Die Ausgabe ist dann "Hallo " gefolgt von einer kommaseparierten Namensliste: "Hallo $name1, $name2, ...".
 
 Als default Name soll immer noch Welt gelten.
 
