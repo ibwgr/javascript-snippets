@@ -191,7 +191,8 @@ while (i < arr.length) {
 // 2
 let result = []
 for (let n of arr) {
-    let isEven = n % 2 === 0;
+    let rest = n % 2
+    let isEven = rest === 0
     result.push(isEven)
 }
 

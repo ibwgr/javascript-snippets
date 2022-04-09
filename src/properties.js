@@ -10,7 +10,7 @@ let obj = {
 
 
 // API für Objekterstellung via Deskriptoren
-obj = Object.create(null)
+obj = {}
 Object.defineProperty(obj, 'items', {
     enumerable: false,
     writable: false,
@@ -27,6 +27,21 @@ obj.add = function(item){
     // this ist eine Referenz auf obj
     this.items.push(item)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // --------------------------------------------------------------------------
 // Verwendung

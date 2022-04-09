@@ -36,7 +36,7 @@ x = 3; // ERROR, re-assignment to const variable not allowed
 }
 // block end
 
-console.log(a); // undefined
+console.log(a); // a is not defined
 
 let a = 2;
 console.log(a); // 2

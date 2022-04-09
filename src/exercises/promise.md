@@ -27,14 +27,14 @@ Verwende jeweils i/10 als Parameterwert.
 Zeichne für folgende Code-Schnippsel ein Ablaufdiagram aller möglichen Abläufe.
 
 ### a
-```
+```javascript
 getDetails(card.id)
     .then(initDetails.bind(null, card))
     .finally(loading.bind(null, false))
 ```
 
 ### b
-```
+```javascript
 showExecuteListConfirmationDialog()
     .then(callExecuteApi.bind(null, paymentsForExecution))
     .then(done.bind(null, true))
@@ -43,7 +43,7 @@ showExecuteListConfirmationDialog()
 ```
 
 ### c
-```
+```javascript
 indicateLoading(true)
     .then(loadRegions.bind(null, card.id))
     .then(assignRegions)
