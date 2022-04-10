@@ -54,7 +54,7 @@ function meineFn(){
     let y = 20 // shadow global y
     // this.x => sucht die variable x nur im this objekt
     // x sucht die variable x im lokalen scope und im äusseren globalen scope
-    console.log(this, this.x, x)
+   // console.log(this, this.x, x)
 }
 meineFn() // undefined undefined 1
 new meineFn() // {} undefined 1
@@ -74,6 +74,7 @@ log.call(1, 'hi')
 log.apply(1, ['hi'])
 let scopeWith1 = log.bind(1)
 scopeWith1('hi')
+
 
 
 

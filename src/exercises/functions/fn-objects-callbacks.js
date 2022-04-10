@@ -10,8 +10,8 @@ function aPlusb (p){
 
 console.log(aPlusb(40))
 
- let abx = add.bind(null,40 )
-console.log(abx(20))
+ let abx = add.bind(null,40 ) // erstes argmument von add(40, p)
+console.log(abx(20))// aufruf abx(20) => add(40, p=20)
 
 
 //
