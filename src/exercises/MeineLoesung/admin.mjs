@@ -26,9 +26,11 @@ export class Store {
 
     findAll(matcher) {
         let found = false
-     if (matcher.length > 0){
-         found = true
-     }
-        return found
+        for (const item of this.items) {
+            if (matcher(item)){
+                found = true
+            }
+        }
+     return found
     }
 }
