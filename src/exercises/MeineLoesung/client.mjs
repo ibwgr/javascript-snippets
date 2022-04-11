@@ -17,6 +17,6 @@ store.remove(person1)
 console.log(persons)
 console.log("*********************************")
 
-let found = store.findAll((person) => person.nachname === "Germann")
+let found = store.findAll((person) => person.nachname === "Martinez")
 console.log(found)
 

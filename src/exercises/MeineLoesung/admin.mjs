@@ -25,12 +25,13 @@ export class Store {
     }
 
     findAll(matcher) {
-        let found = false
+        const foundItems = []
         for (const item of this.items) {
+            //matcherfunktion = true, dann push item in foundItems Array
             if (matcher(item)){
-                found = true
+              foundItems.push(item)
             }
         }
-     return found
+     return foundItems
     }
 }
