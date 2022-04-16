@@ -38,29 +38,45 @@ function ohneParams(){
     console.log(arguments)
 }
 
-
-// scopes
+//**************************************************************************************
+// scopes & context
 let x = 1 // definiert die variable x im aktuellen scope (globaler scope)
 let y = 2
-function scope(){
+function meinefn(){//scope(){
     let y = 20 // shadow global y
     // this.x => sucht die variable x nur im this objekt
     // x sucht die variable x im lokalen scope und im äusseren globalen scope
-    console.log(this, this.x, x)
+    console.log(this, this.x, x)//can not read
+    //console.log(this);
+    //wen funktion aufgerufen, dann ist tis undefined, im strict-mode
 }
-scope() // undefined undefined 1
+
+//new meineFN(){}//{}undefinded, wie in java, neues objekt, leer, this auch leer
+
+//wie meinefunction()... das hier unten mit scope
+scope() // undefined undefined 1 (im strict mode ist es undefinded)
 new scope() // {} undefined 1
-let obj = { scope: scope, x: 2 }
+let obj = { scope: meinefn, x: 2 }//scope, x: 2 }
 obj.scope() // Object 2 1
 
 // scope ändern
 function log(it){
     console.log(this, it)
 }
-log.call(1, 'hi')
-log.apply(1, ['hi'])
-let scopeWith1 = log.bind(1)
-scopeWith1('hi')
+
+//prüfungsfrage!!!!!!!!!! wie rechtsklick, damit bind erklärt wird??
+log.call(1, 'hi')//erstes argument in klammern, ist der kontext, mit this, andere ist das argument
+log.apply(1, ['hi'])//macht gleiche, einfach mit array
+let scopeWith1 = log.bind(1)//bindet den kontext auf 1, macht eine kopie, this ist dort vorbereitet aud 1
+scopeWith1(/* 'welt',*/'hi')
+
+
+
+// function log(it){ //(...it) oder (it , welt)
+//     console.log(this, it)
+// }
+// let scopeWith1 = log.bind(1, 'welt')//bindet den kontext auf 1, macht eine kopie, this ist dort vorbereitet aud 1
+// scopeWith1('hi')'
 
 // arrow functions
 let summ = (a, b) => a + b
@@ -90,3 +106,7 @@ function hoisting(){
     let b = 2
     f = inner
 }
+
+
+
+//meinFN()//undefinded undefinded 1
