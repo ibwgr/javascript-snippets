@@ -1,9 +1,11 @@
 'use strict'
 
 // swap
-// let a = 1 ,b = 2, arr = [a, b];
+ //let a = 1 ,b = 2, arr = [a, b];
 
-// [b, a] = [a, b]
+
+ //[b, a] = [a, b]
+
 
 // // default values
 // let [eins, zwei, drei = 3] = arr
