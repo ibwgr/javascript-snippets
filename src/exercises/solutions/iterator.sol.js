@@ -32,8 +32,8 @@ for(let x of ReverseIterator.create([1,2,3])){
 }
 
 // 2
-function forFun(iteratable, forEach){
-    let it = iteratable[Symbol.iterator](),
+function forFun(iterable, forEach){
+    let it = iterable[Symbol.iterator](),
         item,
         idx = 0
     while((item = it.next()).done == false){
