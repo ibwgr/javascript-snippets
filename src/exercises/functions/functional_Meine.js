@@ -30,7 +30,7 @@ Schreibe die Signatur als Deklaration.
     console.log(arr2.reduce(myfunction))    //6
 
     //oder so
-    console.log(arr2.reduce((sum, val) => sum + val))    //6
+    console.log(arr2.reduce((sum, i) => sum + i))    //6
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ Die Funktion ermittelt für jede Zahl ob diese gerade ist oder nicht. \
 z.B. `even([1,2,3]) => [false, true, false]`
 */
 
-//imperative
+//funktional
 {
     let arr1 = [1, 2, 3, 4];
 
@@ -60,7 +60,7 @@ z.B. `even([1,2,3]) => [false, true, false]`
 }
 
 
-//funktional
+//imperative
 {
     let arr1 = [1, 2, 3, 4];
 
@@ -70,7 +70,7 @@ z.B. `even([1,2,3]) => [false, true, false]`
 
     console.log(myfunction(arr1));      //[false, true, false, true]
 }
-//funktional
+//imperative
 {
     // let arr1 = [1,2,3,4];
     //
@@ -91,17 +91,20 @@ Teste ob diese funktioniert :).
  */
 {
 
+                            filter(in:    Array<A>, predicate: (value: A) => Boolean): Array<A>
+        let newArray = arr1.filter(callback(i[,i [, arr1]])[, i);
+var containers = containers.filter(function(v) { return "boolean" === typeof v});
 
     let containers = [2, 0, false, "", '12', true];
 
-    function myfunction(arr) {
+    function myInternet(arr) {
         let result = containers.filter(function (v) {
             return "boolean" === typeof v
         });
         return result;
     }
 
-    console.log(myfunction(containers)); //[false, true]
+    console.log(myInternet(containers)); //[false, true]
 
     // var containers = [2,0, false ,"", '12', true];
     // var containers = containers.filter(function(v) { return "boolean" === typeof v});
@@ -124,10 +127,10 @@ Teste ob diese funktioniert :).
 /*
 3.2
 Implementiere eine Funktion `map(in: Array<A>, mapper: (value: A) => B): Array<B>`. \
-Teste ob diese funktioniert :).
+Teste ob diese funktioniert :). //
  */
 {
-    function map(arr) {
+    function myfunction(arr) {
 
     }
 
