@@ -43,6 +43,8 @@ function add2(a, b, logger){
     return a + b
 }
 
+console.log(add2(20, 40, console.log))
+
 
 function bPlusa (p){
     return  add2(20, p, console.log)
