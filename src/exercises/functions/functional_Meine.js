@@ -6,8 +6,10 @@ Schreibe eine funktionale und eine imperative Variante.\
 Schreibe die Signatur als Deklaration.
  */
 {//imperativ
-
-    function sum(arr) {
+    //sumFunction::(arr)=>number
+    //sumFunction(in: arr, (i => sum+i)):sum
+    //sumFunction(in: arr, (i,sum => sum+i)):sum
+    function sumFunction(arr) {
         let hilfszahl = 0;
         for (let i = 0; i < arr.length; i++) {
             hilfszahl = hilfszahl + arr[i];
@@ -16,11 +18,15 @@ Schreibe die Signatur als Deklaration.
     }
 
     let arr1 = [1, 2, 3]
-    console.log(sum(arr1))      //6
+    console.log(sumFunction(arr1))      //6
 
 }
 
 {//funktional           lambda, reduse,filter, map, forOf, ForEach
+
+    //Signatur als Dekleration:
+    // reduce(Array<A>,(Summe,i_Array_currentvalue)=>Summe+i_Array_currentvalue):Summe
+    // reduce(Array<A>,(sum,i)=>sum+i):sum
 
     function myfunction(total, arr) {
         return total + arr
@@ -40,8 +46,10 @@ Die Funktion ermittelt für jede Zahl ob diese gerade ist oder nicht. \
 z.B. `even([1,2,3]) => [false, true, false]`
 */
 
-//funktional
+//imperative
 {
+    //myfunction::(arr)=>i,Boolean=>arrKopi
+    //myfunction::(arr)=>arr
     let arr1 = [1, 2, 3, 4];
 
     function myfunction(arr) {
@@ -60,8 +68,12 @@ z.B. `even([1,2,3]) => [false, true, false]`
 }
 
 
-//imperative
+//funktional
 {
+    //Signatur als Dekleration:
+    //  map(Array<A>,(i=>A)): Array<A_kopie'>
+    //`map(in: Array<A>, mapper: (value: A) => B): Array<B>`
+
     let arr1 = [1, 2, 3, 4];
 
     function myfunction(arr) {
@@ -70,7 +82,7 @@ z.B. `even([1,2,3]) => [false, true, false]`
 
     console.log(myfunction(arr1));      //[false, true, false, true]
 }
-//imperative
+//funktional
 {
     // let arr1 = [1,2,3,4];
     //
@@ -90,11 +102,35 @@ Implementiere eine Funktion `filter(in: Array<A>, predicate: (value: A) => Boole
 Teste ob diese funktioniert :).
  */
 {
+    //imperativ
+    //filter(in: Array<A>, predicate: (value: A) => Boolean): Array<A>`
+    function filter(arr){
+       for(let i = 0; i<arr.length;i++){
+           arr[i] = true
+       }
+        return arr;
+    }
 
-                            filter(in:    Array<A>, predicate: (value: A) => Boolean): Array<A>
-        let newArray = arr1.filter(callback(i[,i [, arr1]])[, i);
-var containers = containers.filter(function(v) { return "boolean" === typeof v});
+    let arr1 = [1,2,3]
+    console.log(filter(arr1));  //[true,true,true]
 
+}
+
+{
+    //functional
+    //filter(in: Array<A>, predicate: (value: A) => Boolean): Array<A>`
+    let arr1 = [1,8,3,true,8,2];
+    function myfunction(arr){
+        return arr.filter(i => i === true)//8
+    }
+    //arr1.filter(function(arr[1]){return true === 1});
+    //arr1.filter(Boolean);
+    console.log(myfunction(arr1));//true
+    //console.log(arr1);
+
+}
+
+{
     let containers = [2, 0, false, "", '12', true];
 
     function myInternet(arr) {
@@ -106,21 +142,6 @@ var containers = containers.filter(function(v) { return "boolean" === typeof v})
 
     console.log(myInternet(containers)); //[false, true]
 
-    // var containers = [2,0, false ,"", '12', true];
-    // var containers = containers.filter(function(v) { return "boolean" === typeof v});
-    // console.log(containers); //[false, true]
-
-
-    //
-    //
-    // function myfunction(arr) {
-    //     let resullt = arr.filter(1, 2)
-    //     return result;
-    // }
-    //
-    // arr1 = [1, 2, 3];
-    // console.log(myfunction(arr1))
-
 }
 
 //----------------------------------------------------------------------------------------------------
@@ -130,10 +151,17 @@ Implementiere eine Funktion `map(in: Array<A>, mapper: (value: A) => B): Array<B
 Teste ob diese funktioniert :). //
  */
 {
-    function myfunction(arr) {
-
+    //imperative
+    let arr1 = [1,2,3]
+    function map(arr) {
+        //let x = 'x'
+        let arr2neu= [];
+        for(let i = 0;i<arr.length;i++){
+            arr2neu[i]=arr[i];
+        }
+        return arr2neu;
     }
-
+    console.log(map(arr1)); //[1,2,3]    //[ 'x', 'x', 'x' ]
 
 }
 
