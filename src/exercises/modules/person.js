@@ -1,4 +1,10 @@
 import {client} from "../solutions/modules/admin/Client";
+'use strict';
+
+
+
+
+
 
 export class person{
 
@@ -11,14 +17,15 @@ export class person{
     }
 
 
-    get name() {
+     get name() {
         return this._name;
     }
 
-    get vorname() {
+     get vorname() {
         return this._vorname;
     }
 
 
 
 }
+

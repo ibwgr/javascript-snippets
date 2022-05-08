@@ -24,4 +24,4 @@ Erläuterung zur `findAll`-Signatur: Die Methode `findAll` erwartet als Argument
 welche als Argument ein item entgegennimmt und ein Boolean retourniert. Eine sogenannte Prädikatfunktion oder einfach nur Prädikat (predicate auf engl.).
 
 ### 2
-Schreibe ein Programm client.js, welches einen `Store` verwendet, um Personen darin zu speichern, löschen und suchen.
+Schreibe ein Programm client.mjs, welches einen `Store` verwendet, um Personen darin zu speichern, löschen und suchen.
