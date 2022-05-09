@@ -59,8 +59,23 @@ console.log(arr.map((val => val % 2 === 0)))
 // Signatur map(Array<Number> predicate: val:Number => Boolean): Array<Boolean>
 
 //3.1
-let result = arr.filter((val) => true)
+// eigene Filter Funktion
+ function filter (arr, number)  {
+    let foundNumbers = []
+    for (const ele of arr) {
+        ele === number ? foundNumbers.push(ele): foundNumbers
+        }
+     return foundNumbers
+    }
+
+let result = filter(arr, )
 console.log(result)
+
+
+
+
+
+
 // ein Array ist immer truethy? Alle elemente sind immer true im Array
 
 for (const number of arr) {
