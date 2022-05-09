@@ -73,20 +73,18 @@ console.log(result)
 
 
 
-
-
-
-// ein Array ist immer truethy? Alle elemente sind immer true im Array
-
-for (const number of arr) {
-    if (number){
-        console.log(true)
+//3.2
+//eigene Map funktion
+function mapper (arr){
+    let resultMapper = []
+    for (const number of arr) {
+        number % 2 === 0? resultMapper.push(true): resultMapper.push(false)
     }
+    return resultMapper
 }
 
-//3.2
-let rs = arr.map((val ) => [])
-console.log(rs)
+console.log(mapper(arr))
+
 
 
 
