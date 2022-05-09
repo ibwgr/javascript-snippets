@@ -145,6 +145,7 @@ for (let j = 0; j < normalText.length; j++) {
         caesarText += " "
     }
     let charCode =  normalText.charCodeAt(j) + shift
+
     caesarText += String.fromCharCode(charCode).toUpperCase()
     console.log(caesarText)
 }
