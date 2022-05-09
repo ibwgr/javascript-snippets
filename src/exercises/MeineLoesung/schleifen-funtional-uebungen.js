@@ -44,15 +44,16 @@ console.log(convertedSentence)
 let normalText = "Claudia Martinez"
 let char = Array.from(normalText)
 let shift = 1
-let charCode = char.map((char,  index) => {
-   return normalText.charCodeAt(index) + shift
-})
-console.log(charCode)
 
-let caesarText = charCode.map((charCode) => {
-    return String.fromCharCode(charCode).toUpperCase()
-}).toString()
-
+let caesarText = char.map((char,  index) => {
+   return normalText.charCodeAt(index) + shift})
+    .map((charCode) => {
+    return String.fromCharCode(charCode).toUpperCase()})
+    .toString()
 
 console.log(caesarText)
+
+
+
+
 
