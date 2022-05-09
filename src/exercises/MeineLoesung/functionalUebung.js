@@ -68,7 +68,7 @@ console.log(arr.map((val => val % 2 === 0)))
      return foundNumbers
     }
 
-let result = filter(arr, )
+let result = filter(arr, 5)
 console.log(result)
 
 
