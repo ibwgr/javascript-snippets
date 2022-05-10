@@ -53,6 +53,83 @@ let caesarText = char.map((char,  index) => {
 
 console.log(caesarText)
 
+// Aufgabe 6.1 functional
+
+let mixedNumbers = [1, 5, -10, 6.7, 45, 30]
+let integers = []
+
+ integers = mixedNumbers.filter((number) => number % 1 === 0)
+
+console.log(integers)
+
+//Aufgabe 6.2 functional
+
+let positivNumbers = []
+
+positivNumbers = mixedNumbers.filter((number) => number > 0)
+console.log(positivNumbers)
+
+// Aufgabe 6.3 Quersumme functional
+// zuerst alle einstelligen filtern
+// dann alle mehrstelligen auseinander nehmen (string)
+// mehrstellige wieder in Number umwandeln
+// beide Arrays vereinen
+// dann Quersumme berechnet werden
+let numbersArr = [1, 34, 5, ]
+let stringNumbers = []
+let oneDigit
+let quersum = 0;
+
+stringNumbers = numbersArr.map(String)
+oneDigit = stringNumbers.map((string) => {
+    return string.split("")
+})
+console.log(oneDigit)
+quersum = oneDigit.reduce((sum, val) => sum += val)
+console.log(quersum)
+
+// Aufgabe 6.4 Durchschnitt functional
+
+let average = 0;
+
+average = mixedNumbers.reduce((sum, number) => sum += number) / mixedNumbers.length
+console.log(average)
+
+
+
+// 7.1 functional
+
+let zeichenKette = "Ich habe keine Ahnung"
+let zeichenArr = Array.from(zeichenKette)
+console.log(zeichenArr)
+
+let neueZeichenKette = zeichenArr.map((zeichen) => {
+    return zeichen.split(" ")
+})
+    .map((zeichen, index) => {
+    return index % 2 === 0? zeichen.toString().toUpperCase():zeichen.toString().toLowerCase()
+})
+    .join(" ")
+
+console.log(neueZeichenKette)
+
+
+
+//7.2 functional
+
+
+
+//7.3 functional
+let reversedWord = zeichenKette.split('').reverse().join('')
+console.log(reversedWord)
+
+
+
+//7.4 functional
+let reversedZeichenKette = zeichenKette.split(" ").reverse().join(" ")
+console.log(reversedZeichenKette)
+
+
 
 
 
