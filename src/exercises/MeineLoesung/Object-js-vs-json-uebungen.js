@@ -1,6 +1,4 @@
 "use strict"
-
-
 //1
 
 const users = [
@@ -49,3 +47,25 @@ console.log(topThree3)
 
  const jsonUsers = JSON.stringify(topThree3)
 console.log(jsonUsers)
+
+//3
+
+let userChange = users.map( user => ({
+    content: user.name,
+    length: user.name.length
+
+})).sort((a, b) => {
+    return a.length - b.length
+})
+
+console.log(userChange)
+
+//4
+
+
+
+
+
+//5
+
+
