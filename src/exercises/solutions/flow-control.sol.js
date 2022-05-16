@@ -3,6 +3,8 @@
 /////////////////////////// Bedingungen / If
 
 // 1
+
+{
 const age = 13
 const name = "Walter"
 let greeting = ""
@@ -38,11 +40,12 @@ if (age > 100) {
 
 const resultat2 = greeting + " " + name
 console.log(resultat2)
+}
+
 
 
 // 2
-
-
+{
 let age = 15
 let betrag = 0
 
@@ -59,17 +62,6 @@ if (age < 5) {
 console.log(betrag + " CHF")
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Variante 2
 betrag = 15
 if (age < 5) {
@@ -81,9 +73,11 @@ if (age >= 5 && age <= 15) {
 if (age >= 60) {
     betrag = 10
 }
+}
 
 
 //3
+{
 let age = 19;
 let sex = 'w'; // geschlecht, m oder w
 let canEnter = false;
@@ -104,7 +98,7 @@ console.log('Kommst ich rein? ' + canEnter );
 
 // Variante 2
 canEnter = (age >= 18 && sex === 'w') || (age >= 20 && sex === 'm');
-
+}
 
 
 /////////////////////////// Schleifen / Loops
@@ -265,3 +259,94 @@ for (let charIdx = 0; charIdx < plainText.length; charIdx++) {
     cipherText += String.fromCharCode(charCode + shift)
 }
 console.log(cipherText)
+
+
+// 6
+const numbers = [1, 34, 78, 4.2, -9]
+
+// 6.1
+for(const n of numbers){
+    if(n % 1 === 0) console.log(n)
+}
+
+// 6.2
+for(const n of numbers){
+    if(n > 0) console.log(n)
+}
+
+// 6.3
+{
+let sum = 0
+for(const n of numbers){
+    if(n % 1 == 0){
+        let positivString = Math.abs(n).toString()
+        for(const digitString of positivString.split('')){
+            sum += Number(digitString)
+        }
+    }
+    
+}
+sum
+}
+
+// 6.4
+{
+let sum = 0
+for(const n of numbers){
+ sum += n
+}
+const schnitt = sum / numbers.length
+}
+
+
+// 7
+const randomString = "4bcd3fg8ijkl  mnoPqRs tuvW"
+
+// 7.1
+{
+    let charArr = randomString.split('')
+    for(let i = 1; i < charArr.length; i+=2){
+        charArr[i] = charArr[i].toUpperCase()
+    }
+    const result = charArr.join('')
+    result
+}
+
+// 7.2
+// ...
+
+// 7.3
+{
+    console.log(randomString.split('').reverse().join(''))
+}
+
+// 7.4
+{
+    console.log(randomString.split(' ').reverse().join(' '))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
