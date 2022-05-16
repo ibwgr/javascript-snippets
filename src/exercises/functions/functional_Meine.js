@@ -165,3 +165,10 @@ Teste ob diese funktioniert :). //
 
 }
 
+{
+    //funktional
+    let arrNumbers = [1,2,3];
+
+    console.log(arrNumbers.map(String));
+
+}

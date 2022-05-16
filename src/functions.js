@@ -1,11 +1,13 @@
 'use strict'
 // Functions in JavaScript
 let a = 1, b = 2
+
 // function declaration
 function sum(a, b){
     return a + b
 }
 sum(1, 2)
+
 
 // function expression
 let multiply = function dkd(a, b){
@@ -24,9 +26,48 @@ function sum(...b){
 }
 sum(1, 2, 3, 4, 5)
 
+// Rest-parameter aus Buch
+function addAllNew(...numbers){
+    let result = 0;
+    for(let i=0;i<numbers.length;i++){
+        result += numbers[i];
+    }
+    return result;
+}
+
+//rest operator
+// Define a destructuring array with two regular variables and one rest variable:
+const [firstName, lastName, ...otherInfo] = [
+    "Oluwatobi", "Sofela", "CodeSweetly", "Web Developer", "Male"
+];
+// Invoke the otherInfo variable:
+console.log(otherInfo);
+// The invocation above will return:
+["CodeSweetly", "Web Developer", "Male"]
+
+
+
+
+
 // spread operator
 multiply(...[1, 2])
 // multiply wird gleich aufgerufen wie in: multiply(1, 2)
+
+
+// spread operator
+const numbers = [1, 3, 5, 7];
+function addNumbers(a, b, c, d) {
+    return a + b + c + d;
+}
+console.log(addNumbers(...numbers));
+
+
+
+// The invocation above will return:
+16
+
+
+
 
 // optionale parameter
 function sayHello(to = 'World'){
@@ -77,7 +118,8 @@ scopeWith1('hi')
 
 
 
-
+//arrow function aus Buch
+let add = (x) => { return x +x };       //this-binding
 
 // arrow functions
 let summ = (a, b) => a + b
@@ -111,3 +153,33 @@ function hoistingDemo(){
     let b = 2
     f = inner
 }
+
+
+
+//function mit nur zahlen als Typ
+function add(number1,number2){
+    if( (typeof  number1 !== 'number') || (typeof number2 !== 'number') ){
+        throw new TypeError('Parameter müssen Zahlen sein');
+    }
+    return number1 + number2;
+}
+
+
+
+//while
+let i = 10;
+while (i>0) {
+    console.log(i);
+    i--;
+}
+
+//do-while
+let i = 10;
+do {
+    console.log(i);
+    i--;
+} while (i>0);
+
+
+
+

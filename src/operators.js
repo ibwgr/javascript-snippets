@@ -1,5 +1,11 @@
 // == vs ===
 
+// ==   liefert true, wenn die Operanden gleich sind
+// ===  liefert true, wenn die Operanden gleich sind und den gleichen Datentyp haben
+
+// truthy = true
+// falsy  = false   = null,undefinded,"",0, NAN
+
 // equality
 let a
 a = '0' == 0
@@ -10,6 +16,9 @@ a = false == []
 a = false == 0
 a = new Boolean(false) ? 't' : 'f'
 a = new Boolean(false) == false
+
+
+
 
 // logical
 // evaluiere solange bis erster true => weisse den zu

@@ -38,3 +38,17 @@ console.log(mensch44.vollerName+"haölllloooo")
 
 //export Person p2 = new Person("Muster","Doris");
 
+
+// Objekterzeugung über die Objekt-literal-Schreibweise
+const person33 = {
+    firstname: "hsnii",
+    lastname: "Mustermann",
+    talk: function (){
+        console.log("hallo");
+    }
+}
+
+console.log(person33.firstname);
+//console.log(person33[lastname]);//gemäss buch, bibt aber Fehler raus
+console.log(person33["lastname"]);
+console.log(person33.talk());
