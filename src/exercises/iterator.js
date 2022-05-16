@@ -10,3 +10,4 @@
 //
 // Iteriere über das iterable Objekt und rufe den Callback für jeden Wert auf, 
 // solange bis alle Elemente iteriert sind.
+//-*-*
