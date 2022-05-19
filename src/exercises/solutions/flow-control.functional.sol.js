@@ -38,3 +38,57 @@ let cipherText = Array.from(plainText)
   .map(charCode => String.fromCharCode(charCode + shift))
   .join('')
 console.log(cipherText)
+
+
+// 6
+const numbers = [1, 34, 78, 4.2, -9]
+
+// 6.1
+console.log(numbers.filter(n => n %1 === 0))
+
+// 6.2
+console.log(numbers.filter(n => n > 0))
+
+
+// 6.3
+{
+  console.log(numbers
+    .filter(n => n %1===0)
+    .map(Math.abs)
+    .map(String)
+    .flatMap(s => s.split(''))
+    .map(Number)
+    .reduce((sum, n) => sum + n, 0)
+  )
+}
+
+// 6.4
+{
+  const schnitt = numbers.reduce((sum, n) => sum + n, 0) / numbers.length
+}
+
+
+// 7
+const randomString = "4bcd3fg8ijkl  mnoPqRs tuvW"
+
+// 7.1
+{
+    const result = randomString
+    .split('')
+    .map((s, i) => (i % 2 === 1) ? s.toUpperCase() : s)
+    .join('')
+    result
+}
+
+// 7.2
+// ...
+
+// 7.3
+{
+    console.log(randomString.split('').reverse().join(''))
+}
+
+// 7.4
+{
+    console.log(randomString.split(' ').reverse().join(' '))
+}
