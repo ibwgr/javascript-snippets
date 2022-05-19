@@ -14,8 +14,8 @@ const users = [
     new User('Cornelia', 62),
     new User('Beat', 10),
     new User('Elay', 92),
-    new User('Ladina', 22),
-    new User('Tino', 21),
+    new User('Ladina', 2),
+    new User('Tino', 1),
 ]
 
 // 1 Sortiere den Array anhand der Punktezahl aufsteigend.
@@ -78,19 +78,67 @@ const users = [
 
 // 4 Erstelle eine tabellarisch korrekt ausgerichtete Rangliste der 3 top Scorer, im ASCII Format :).
 {
+    function getLengthOfLongest(arrayOfUserObj, key, columnHeader, settings){
+        let length = 0
+        for (let user of arrayOfUserObj){
+            length = user[key].toString().length > length ? user[key].toString().length : length;
+        }
+        length = length < columnHeader.length ? columnHeader.length : length;
+        return length + settings.offsetBefore + settings.offsetAfter
+    }
     // Klone das Array
     let u = [...users]
     function getTopNScorers(scorers, n) {
         scorers.sort((a, b) => (a.punkte < b.punkte) ? 1 : -1)
         return scorers.slice(0, n)
     }
-    let top3 = getTopNScorers(u,3)
+    let top3 = getTopNScorers(u,12)
+    let columns = ["Name","Punkte"]
+    let settings = {
+        offsetBefore : 0,       // Funktioniert "noch" nicht (ich hasse es wenn die Tabellenrahmen am content kleben)
+        offsetAfter: 0          // Funktioniert "noch" nicht (ich hasse es wenn die Tabellenrahmen am content kleben)
+    }
+    let colLengths = []
+    colLengths.push( getLengthOfLongest(top3, "name", columns[0], settings) )
+    colLengths.push( getLengthOfLongest(top3, "punkte", columns[1], settings) )
 
-    // Vorbereitung Tabelle
-    let vals = Object.keys(User).map(function (key) {
-        return obj[key];
-    });
+    // überschriften
+    let spacers = ""
+    let nameSpacers = Math.abs(columns[0].length - colLengths[0]);
+    if(nameSpacers){
+        for (let i = 0; i < nameSpacers; i++) {
+            spacers += " ";
+        }
+    }
+    // Headers:
+    let header = "|"
+    header += buildColumn(columns[0],colLengths[0],true)
+    header += buildColumn(columns[1],colLengths[1],false)
+    console.log(header)
 
-    console.log(vals)
-
+    // Trenner
+    let divider = "|"
+    for (let i = 0; i < colLengths[0]; i++) {
+        divider+="-"
+    }
+    divider += "|"
+    for (let i = 0; i < colLengths[1]; i++) {
+        divider+="-"
+    }
+    divider += "|"
+    console.log(divider)
+    // Rows:
+    for (let user of top3){
+        let name = buildColumn(user.name, colLengths[0], true)
+        let pts = buildColumn(user.punkte, colLengths[1], false)
+        console.log(`|${name}${pts}`)
+    }
+    function buildColumn(colValue, maxLength, append = true){
+        let spacers = ""
+        let spacerCount = Math.abs(colValue.toString().length - maxLength)
+        for (let i = 0; i < spacerCount; i++) {
+            spacers += " ";
+        }
+        return append ? colValue + spacers + "|" : spacers + colValue + "|"
+    }
 }
