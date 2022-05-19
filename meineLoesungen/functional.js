@@ -11,7 +11,10 @@ let zahlen = [5,6,7,8]
     console.log(sum(zahlen))
 
     // Imperativ
-    let summe = zahlen.reduce((sum, val) =>sum + val)
+    let summe = 0
+    for (const zahl of zahlen){
+        summe + zahl
+    }
     console.log(summe)
 }
 
