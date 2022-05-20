@@ -18,6 +18,7 @@ function calcX(z){
 // }
 
 // 1b
+// Variante mit Promises
 // function calcX(base){
 //     return new Promise((res, rej)=>{
 //         setTimeout(()=>{
@@ -34,6 +35,24 @@ function calcX(z){
 //     calcX(i/10).then(console.log).catch(_=>_)
 // }
 // Die Reihenfolge der Ergebnisse ist nicht mehr gleich, wie die der Aufrufe.
+
+// 1b
+// Variante mit async/await (calcX ist gleich wie bei Lösung 1b mit Promises)
+/**
+ console.log("before");
+ (async function(){
+    for (let i = 0; i < 10; i++) {
+        console.log("Erstelle Berechnung " + i)
+        try{
+            const meineZahl = await calcX(Math.random())
+            console.log(meineZahl)
+        }catch (e) {
+        }
+    }
+    console.log("Aufträge erstellt. Warten angesagt ...")
+ })()
+ console.log("after")
+ */
 
 // 1c
 // Variante ohne Promise.all
