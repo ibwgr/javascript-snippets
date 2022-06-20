@@ -1,4 +1,17 @@
-'use strict'
+'use strict'        //seit ECMASript 5
+// macht fehler, wenn variable ohne let, oder var angelegt ist
+/*
+Strict- mode ( nicht sloopy-mode schlampiger Modus)
+'use strict';                          als erste anweisung                          seit ECMAScript 5       nicht jeder Browser…  oder "use strict";
++ code kann schneller ausgeführt werden
++ wandelt einige zuvor still akzeptierte Versehen in ausdrückliche Fehler um.
+   behandelt diese Versehen als Fehler, so dass sie entdeckt und unverzüglich behoben werden können.
+   (zb. versehentlich eine globale Variable zu erstellen)
++ verhindert syntaxfehler, zb               function sum(a, a, c) { // !!! Syntaxfehler weil 2x a…
+ */
+
+
+
 // singleton
 let validator = {
     valid: true,
