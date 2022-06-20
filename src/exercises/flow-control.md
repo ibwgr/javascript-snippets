@@ -42,7 +42,7 @@ Gib die Entscheidung auf der Console aus.
 
 Schreibe zwei Varianten,
 - eine Variante mit switch case
-- eine Variante mit && und || (ohne ganz ausgeschriebene if)
+- eine Variante mit && und || (ohne ganz ausgeschriebene if) Ternäre if
 
 ## Schleifen / Loops
 

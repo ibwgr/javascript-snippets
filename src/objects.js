@@ -63,5 +63,4 @@ const child1 = {
     weight: "86kg",
     father: person
 }
-
 person.children.push(child1)

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zahlen raten</title>
+    <script>
+        // wenn fertig mit Dom geladen führe erst dann den event aus (Alert)
+        document.addEventListener('DOMContentLoaded', () => {
+            alert(document.querySelectorAll('p'))
+        })
+    </script>
+
+    <!--
+     // Parallel das script laden aber asuführung erst nach dem der Dom geladen wurde
+    <script src="flow-controll.js" defer>
+
+    </script>
+    -->
+</head>
+<body>
+<p>
+    Finde die Geheimzahl!
+</p>
+
+<script>
+const numberOfElements = 15
+    const secret = Math.floor(Math.random() * numberOfElements)
+    console.log(secret)
+
+    for (let divNr = 1; divNr <= numberOfElements ; divNr++) {
+        const div = document.createElement("div")
+        div.innerText = String(divNr)
+        div.addEventListener("click", (ev) => {
+            if(Number(ev.target.innerText) === secret){
+                alert('hurray')
+            }
+        })
+    document.body.appendChild(div)
+    }
+
+</script>
+</body>
+</html>
